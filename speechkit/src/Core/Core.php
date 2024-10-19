@@ -61,6 +61,7 @@ class Core
      *
      * @since 3.5.0
      * @since 3.7.0 Process audio for posts with 'pending' status
+     * @since 5.0.0 Remove beyondwords_post_statuses filter.
      *
      * @param string $status WordPress post status (e.g. 'pending', 'publish', 'private', 'future', etc).
      *
@@ -69,25 +70,6 @@ class Core
     public function shouldProcessPostStatus($status)
     {
         $statuses = ['pending', 'publish', 'private', 'future'];
-
-        /**
-         * Filters the post statuses that we consider for audio processing.
-         *
-         * When a post is saved with any other post status we will not send
-         * any data to the BeyondWords API.
-         *
-         * The default values are "pending", "publish", "private" and "future".
-         *
-         * Scheduled for removal in plugin version 5.0.0.
-         *
-         * @since 3.3.3
-         * @since 3.7.0 Process audio for posts with 'pending' status
-         *
-         * @deprecated 4.3.0 Replaced with beyondwords_settings_post_statuses.
-         *
-         * @param string[] $statuses The post statuses that we consider for audio processing.
-         */
-        $statuses = apply_filters('beyondwords_post_statuses', $statuses);
 
         /**
          * Filters the post statuses that we consider for audio processing.
@@ -226,6 +208,7 @@ class Core
      * @since 3.7.0 Stop saving response.access_key, we don't currently use it.
      * @since 4.0.0 Replace Podcast IDs with Content IDs
      * @since 4.5.0 Save response.preview_token to support post scheduling.
+     * @since 5.0.0 Stop saving `beyondwords_podcast_id`.
      */
     public function processResponse($response, $projectId, $postId)
     {
@@ -239,9 +222,6 @@ class Core
 
             // Save Content ID
             update_post_meta($postId, 'beyondwords_content_id', $response['id']);
-
-            // Temporarily save into Podcast ID field to support downgrades to < 4.0.0
-            update_post_meta($postId, 'beyondwords_podcast_id', $response['id']);
 
             if (array_key_exists('preview_token', $response)) {
                 // Save Preview Key
@@ -264,23 +244,21 @@ class Core
             return;
         }
 
-        if (CoreUtils::isGutenbergPage()) {
-            $postType = get_post_type();
+        $postType = get_post_type();
 
-            $postTypes = SettingsUtils::getCompatiblePostTypes();
+        $postTypes = SettingsUtils::getCompatiblePostTypes();
 
-            if (in_array($postType, $postTypes, true)) {
-                $assetFile = include BEYONDWORDS__PLUGIN_DIR . 'build/index.asset.php';
+        if (in_array($postType, $postTypes, true)) {
+            $assetFile = include BEYONDWORDS__PLUGIN_DIR . 'build/index.asset.php';
 
-                // Register the Block Editor JS
-                wp_enqueue_script(
-                    'beyondwords-block-js',
-                    BEYONDWORDS__PLUGIN_URI . 'build/index.js',
-                    $assetFile['dependencies'],
-                    $assetFile['version'],
-                    true
-                );
-            }
+            // Register the Block Editor JS
+            wp_enqueue_script(
+                'beyondwords-block-js',
+                BEYONDWORDS__PLUGIN_URI . 'build/index.js',
+                $assetFile['dependencies'],
+                $assetFile['version'],
+                true
+            );
         }
     }
 
@@ -382,7 +360,7 @@ class Core
             ! array_key_exists('deleted', $response) ||
             ! $response['deleted'] === true
         ) {
-            $errorMessage = __('Unable to delete audio from BeyondWords dashboard');
+            $errorMessage = __('Unable to delete audio from BeyondWords dashboard', 'speechkit');
 
             if (is_array($response) && array_key_exists('message', $response)) {
                 $errorMessage .= ': ' . $response['message'];
@@ -425,7 +403,7 @@ class Core
             ! array_key_exists('deleted', $response) ||
             ! $response['deleted'] === false
         ) {
-            $errorMessage = __('Unable to restore audio to BeyondWords dashboard');
+            $errorMessage = __('Unable to restore audio to BeyondWords dashboard', 'speechkit');
 
             if (is_array($response) && array_key_exists('message', $response)) {
                 $errorMessage .= ': ' . $response['message'];

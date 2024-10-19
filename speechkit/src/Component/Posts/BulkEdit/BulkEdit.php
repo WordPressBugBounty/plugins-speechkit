@@ -20,7 +20,7 @@ use Beyondwords\Wordpress\Component\Settings\SettingsUtils;
 use Beyondwords\Wordpress\Plugin;
 
 /**
- * BulkEdit setup
+ * BulkEdit
  *
  * @since 3.0.0
  */
@@ -97,7 +97,7 @@ class BulkEdit
          */
         if (
             ! isset($_POST['beyondwords_bulk_edit_nonce']) ||
-            ! wp_verify_nonce(sanitize_text_field($_POST['beyondwords_bulk_edit_nonce']), 'beyondwords_bulk_edit')
+            ! wp_verify_nonce(sanitize_key($_POST['beyondwords_bulk_edit_nonce']), 'beyondwords_bulk_edit')
         ) {
             wp_nonce_ays('');
         }
@@ -157,7 +157,7 @@ class BulkEdit
         $response = $beyondwords_wordpress_plugin->core->batchDeleteAudioForPosts($postIds);
 
         if (! $response) {
-            throw new \Exception(esc_html__('Error while bulk deleting audio. Please contact support with reference BULK-NO-RESPONSE.')); // phpcs:ignore Generic.Files.LineLength.TooLong
+            throw new \Exception(esc_html__('Error while bulk deleting audio. Please contact support with reference BULK-NO-RESPONSE.', 'speechkit')); // phpcs:ignore Generic.Files.LineLength.TooLong
         }
 
         // Now process all posts
@@ -231,7 +231,7 @@ class BulkEdit
                         $failed++;
                     }
                 } else {
-                    throw new \Exception(esc_html__('Error while bulk generating audio. Please contact support with reference BULK-NO-PLUGIN.')); // phpcs:ignore Generic.Files.LineLength.TooLong
+                    throw new \Exception(esc_html__('Error while bulk generating audio. Please contact support with reference BULK-NO-PLUGIN.', 'speechkit')); // phpcs:ignore Generic.Files.LineLength.TooLong
                 }
             }
         } catch (\Exception $e) {

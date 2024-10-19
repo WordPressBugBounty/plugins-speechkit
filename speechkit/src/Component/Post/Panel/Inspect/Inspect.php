@@ -16,7 +16,7 @@ use Beyondwords\Wordpress\Component\Post\PostMetaUtils;
 use Beyondwords\Wordpress\Component\Settings\SettingsUtils;
 
 /**
- * Inspect setup
+ * Inspect
  *
  * @since 3.0.0
  */
@@ -50,20 +50,11 @@ class Inspect
     {
         // Only enqueue for Post screens
         if ($hook === 'post.php' || $hook === 'post-new.php') {
-            // Clipboard.js dependency
-            wp_enqueue_script(
-                'clipboard',
-                'https://cdn.jsdelivr.net/npm/clipboard@2.0.10/dist/clipboard.min.js',
-                array('jquery'),
-                '2.0.10',
-                true
-            );
-
-            // Our script for the "Copy" button
+            // @todo Add Clipboard.js as an npm dependency (it's in the inspect.js file for now)
             wp_enqueue_script(
                 'beyondwords-inspect',
                 BEYONDWORDS__PLUGIN_URI . 'src/Component/Post/Panel/Inspect/js/inspect.js',
-                array('jquery', 'clipboard'),
+                array('jquery'),
                 BEYONDWORDS__PLUGIN_VERSION,
                 true
             );
@@ -170,7 +161,7 @@ class Inspect
             <table id="inspect-table">
                 <thead>
                     <tr>
-                        <th class="left"><?php esc_html_e('Name', 'speechkkit'); ?></th>
+                        <th class="left"><?php esc_html_e('Name', 'speechkit'); ?></th>
                         <th><?php esc_html_e('Value', 'speechkit'); ?></th>
                     </tr>
                 </thead>
@@ -307,7 +298,7 @@ class Inspect
         if (
             ! isset($_POST['beyondwords_delete_content_nonce']) ||
             ! wp_verify_nonce(
-                sanitize_text_field($_POST['beyondwords_delete_content_nonce']),
+                sanitize_key($_POST['beyondwords_delete_content_nonce']),
                 'beyondwords_delete_content'
             )
         ) {

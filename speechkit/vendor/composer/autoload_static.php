@@ -4,13 +4,16 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitf9f0daab387946954088015ca7cc4ff8
+class ComposerStaticInitcacac5a3ae3d71c7f8b9a2e1bcecb136
 {
     public static $files = array (
-        '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
+        '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
+        'e69f7f6ee287b969198c3c9d6777bd38' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/bootstrap.php',
+        'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
+        '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -18,7 +21,12 @@ class ComposerStaticInitf9f0daab387946954088015ca7cc4ff8
         array (
             'Symfony\\Polyfill\\Php80\\' => 23,
             'Symfony\\Polyfill\\Mbstring\\' => 26,
+            'Symfony\\Polyfill\\Intl\\Normalizer\\' => 33,
+            'Symfony\\Polyfill\\Intl\\Grapheme\\' => 31,
             'Symfony\\Polyfill\\Ctype\\' => 23,
+            'Symfony\\Component\\String\\' => 25,
+            'Symfony\\Component\\PropertyInfo\\' => 31,
+            'Symfony\\Component\\PropertyAccess\\' => 33,
             'Symfony\\Component\\DomCrawler\\' => 29,
         ),
         'B' => 
@@ -36,9 +44,29 @@ class ComposerStaticInitf9f0daab387946954088015ca7cc4ff8
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
         ),
+        'Symfony\\Polyfill\\Intl\\Normalizer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer',
+        ),
+        'Symfony\\Polyfill\\Intl\\Grapheme\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme',
+        ),
         'Symfony\\Polyfill\\Ctype\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
+        ),
+        'Symfony\\Component\\String\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/string',
+        ),
+        'Symfony\\Component\\PropertyInfo\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/property-info',
+        ),
+        'Symfony\\Component\\PropertyAccess\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/property-access',
         ),
         'Symfony\\Component\\DomCrawler\\' => 
         array (
@@ -52,13 +80,6 @@ class ComposerStaticInitf9f0daab387946954088015ca7cc4ff8
 
     public static $classMap = array (
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
-        'Beyondwords\\Wordpress\\Compatibility\\Elementor\\ControlsSections\\Beyondwords' => __DIR__ . '/../..' . '/src/Compatibility/Elementor/ControlsSections/Beyondwords.php',
-        'Beyondwords\\Wordpress\\Compatibility\\Elementor\\ControlsSections\\Help' => __DIR__ . '/../..' . '/src/Compatibility/Elementor/ControlsSections/Help.php',
-        'Beyondwords\\Wordpress\\Compatibility\\Elementor\\ControlsSections\\Inspect' => __DIR__ . '/../..' . '/src/Compatibility/Elementor/ControlsSections/Inspect.php',
-        'Beyondwords\\Wordpress\\Compatibility\\Elementor\\Controls\\InspectText' => __DIR__ . '/../..' . '/src/Compatibility/Elementor/Controls/InspectText.php',
-        'Beyondwords\\Wordpress\\Compatibility\\Elementor\\Controls\\InspectTextarea' => __DIR__ . '/../..' . '/src/Compatibility/Elementor/Controls/InspectTextarea.php',
-        'Beyondwords\\Wordpress\\Compatibility\\Elementor\\Controls\\Player' => __DIR__ . '/../..' . '/src/Compatibility/Elementor/Controls/Player.php',
-        'Beyondwords\\Wordpress\\Compatibility\\Elementor\\Elementor' => __DIR__ . '/../..' . '/src/Compatibility/Elementor/Elementor.php',
         'Beyondwords\\Wordpress\\Compatibility\\WPGraphQL\\WPGraphQL' => __DIR__ . '/../..' . '/src/Compatibility/WPGraphQL/WPGraphQL.php',
         'Beyondwords\\Wordpress\\Component\\Post\\AddPlayer\\AddPlayer' => __DIR__ . '/../..' . '/src/Component/Post/AddPlayer/AddPlayer.php',
         'Beyondwords\\Wordpress\\Component\\Post\\BlockAttributes\\BlockAttributes' => __DIR__ . '/../..' . '/src/Component/Post/BlockAttributes/BlockAttributes.php',
@@ -75,23 +96,41 @@ class ComposerStaticInitf9f0daab387946954088015ca7cc4ff8
         'Beyondwords\\Wordpress\\Component\\Posts\\BulkEdit\\BulkEdit' => __DIR__ . '/../..' . '/src/Component/Posts/BulkEdit/BulkEdit.php',
         'Beyondwords\\Wordpress\\Component\\Posts\\BulkEdit\\Notices' => __DIR__ . '/../..' . '/src/Component/Posts/BulkEdit/Notices.php',
         'Beyondwords\\Wordpress\\Component\\Posts\\Column\\Column' => __DIR__ . '/../..' . '/src/Component/Posts/Column/Column.php',
-        'Beyondwords\\Wordpress\\Component\\Settings\\ApiKey\\ApiKey' => __DIR__ . '/../..' . '/src/Component/Settings/ApiKey/ApiKey.php',
-        'Beyondwords\\Wordpress\\Component\\Settings\\Languages\\Languages' => __DIR__ . '/../..' . '/src/Component/Settings/Languages/Languages.php',
-        'Beyondwords\\Wordpress\\Component\\Settings\\PlayerStyle\\PlayerStyle' => __DIR__ . '/../..' . '/src/Component/Settings/PlayerStyle/PlayerStyle.php',
-        'Beyondwords\\Wordpress\\Component\\Settings\\PlayerUI\\PlayerUI' => __DIR__ . '/../..' . '/src/Component/Settings/PlayerUI/PlayerUI.php',
-        'Beyondwords\\Wordpress\\Component\\Settings\\PlayerVersion\\PlayerVersion' => __DIR__ . '/../..' . '/src/Component/Settings/PlayerVersion/PlayerVersion.php',
-        'Beyondwords\\Wordpress\\Component\\Settings\\PrependExcerpt\\PrependExcerpt' => __DIR__ . '/../..' . '/src/Component/Settings/PrependExcerpt/PrependExcerpt.php',
-        'Beyondwords\\Wordpress\\Component\\Settings\\Preselect\\Preselect' => __DIR__ . '/../..' . '/src/Component/Settings/Preselect/Preselect.php',
-        'Beyondwords\\Wordpress\\Component\\Settings\\ProjectId\\ProjectId' => __DIR__ . '/../..' . '/src/Component/Settings/ProjectId/ProjectId.php',
+        'Beyondwords\\Wordpress\\Component\\Settings\\Fields\\ApiKey\\ApiKey' => __DIR__ . '/../..' . '/src/Component/Settings/Fields/ApiKey/ApiKey.php',
+        'Beyondwords\\Wordpress\\Component\\Settings\\Fields\\CallToAction\\CallToAction' => __DIR__ . '/../..' . '/src/Component/Settings/Fields/CallToAction/CallToAction.php',
+        'Beyondwords\\Wordpress\\Component\\Settings\\Fields\\IncludeExcerpt\\IncludeExcerpt' => __DIR__ . '/../..' . '/src/Component/Settings/Fields/IncludeExcerpt/IncludeExcerpt.php',
+        'Beyondwords\\Wordpress\\Component\\Settings\\Fields\\IncludeTitle\\IncludeTitle' => __DIR__ . '/../..' . '/src/Component/Settings/Fields/IncludeTitle/IncludeTitle.php',
+        'Beyondwords\\Wordpress\\Component\\Settings\\Fields\\Language\\Language' => __DIR__ . '/../..' . '/src/Component/Settings/Fields/Language/Language.php',
+        'Beyondwords\\Wordpress\\Component\\Settings\\Fields\\Languages\\Languages' => __DIR__ . '/../..' . '/src/Component/Settings/Fields/Languages/Languages.php',
+        'Beyondwords\\Wordpress\\Component\\Settings\\Fields\\PlaybackControls\\PlaybackControls' => __DIR__ . '/../..' . '/src/Component/Settings/Fields/PlaybackControls/PlaybackControls.php',
+        'Beyondwords\\Wordpress\\Component\\Settings\\Fields\\PlaybackFromSegments\\PlaybackFromSegments' => __DIR__ . '/../..' . '/src/Component/Settings/Fields/PlaybackFromSegments/PlaybackFromSegments.php',
+        'Beyondwords\\Wordpress\\Component\\Settings\\Fields\\PlayerColors\\PlayerColors' => __DIR__ . '/../..' . '/src/Component/Settings/Fields/PlayerColors/PlayerColors.php',
+        'Beyondwords\\Wordpress\\Component\\Settings\\Fields\\PlayerStyle\\PlayerStyle' => __DIR__ . '/../..' . '/src/Component/Settings/Fields/PlayerStyle/PlayerStyle.php',
+        'Beyondwords\\Wordpress\\Component\\Settings\\Fields\\PlayerUI\\PlayerUI' => __DIR__ . '/../..' . '/src/Component/Settings/Fields/PlayerUI/PlayerUI.php',
+        'Beyondwords\\Wordpress\\Component\\Settings\\Fields\\PreselectGenerateAudio\\PreselectGenerateAudio' => __DIR__ . '/../..' . '/src/Component/Settings/Fields/PreselectGenerateAudio/PreselectGenerateAudio.php',
+        'Beyondwords\\Wordpress\\Component\\Settings\\Fields\\ProjectId\\ProjectId' => __DIR__ . '/../..' . '/src/Component/Settings/Fields/ProjectId/ProjectId.php',
+        'Beyondwords\\Wordpress\\Component\\Settings\\Fields\\SpeakingRate\\BodyVoiceSpeakingRate' => __DIR__ . '/../..' . '/src/Component/Settings/Fields/SpeakingRate/BodyVoiceSpeakingRate.php',
+        'Beyondwords\\Wordpress\\Component\\Settings\\Fields\\SpeakingRate\\TitleVoiceSpeakingRate' => __DIR__ . '/../..' . '/src/Component/Settings/Fields/SpeakingRate/TitleVoiceSpeakingRate.php',
+        'Beyondwords\\Wordpress\\Component\\Settings\\Fields\\TextHighlighting\\TextHighlighting' => __DIR__ . '/../..' . '/src/Component/Settings/Fields/TextHighlighting/TextHighlighting.php',
+        'Beyondwords\\Wordpress\\Component\\Settings\\Fields\\Voice\\BodyVoice' => __DIR__ . '/../..' . '/src/Component/Settings/Fields/Voice/BodyVoice.php',
+        'Beyondwords\\Wordpress\\Component\\Settings\\Fields\\Voice\\TitleVoice' => __DIR__ . '/../..' . '/src/Component/Settings/Fields/Voice/TitleVoice.php',
+        'Beyondwords\\Wordpress\\Component\\Settings\\Fields\\Voice\\Voice' => __DIR__ . '/../..' . '/src/Component/Settings/Fields/Voice/Voice.php',
+        'Beyondwords\\Wordpress\\Component\\Settings\\Fields\\WidgetPosition\\WidgetPosition' => __DIR__ . '/../..' . '/src/Component/Settings/Fields/WidgetPosition/WidgetPosition.php',
+        'Beyondwords\\Wordpress\\Component\\Settings\\Fields\\WidgetStyle\\WidgetStyle' => __DIR__ . '/../..' . '/src/Component/Settings/Fields/WidgetStyle/WidgetStyle.php',
         'Beyondwords\\Wordpress\\Component\\Settings\\Settings' => __DIR__ . '/../..' . '/src/Component/Settings/Settings.php',
-        'Beyondwords\\Wordpress\\Component\\Settings\\SettingsUpdated\\SettingsUpdated' => __DIR__ . '/../..' . '/src/Component/Settings/SettingsUpdated/SettingsUpdated.php',
         'Beyondwords\\Wordpress\\Component\\Settings\\SettingsUtils' => __DIR__ . '/../..' . '/src/Component/Settings/SettingsUtils.php',
+        'Beyondwords\\Wordpress\\Component\\Settings\\Sync' => __DIR__ . '/../..' . '/src/Component/Settings/Sync.php',
+        'Beyondwords\\Wordpress\\Component\\Settings\\Tabs\\Advanced\\Advanced' => __DIR__ . '/../..' . '/src/Component/Settings/Tabs/Advanced/Advanced.php',
+        'Beyondwords\\Wordpress\\Component\\Settings\\Tabs\\Content\\Content' => __DIR__ . '/../..' . '/src/Component/Settings/Tabs/Content/Content.php',
+        'Beyondwords\\Wordpress\\Component\\Settings\\Tabs\\Credentials\\Credentials' => __DIR__ . '/../..' . '/src/Component/Settings/Tabs/Credentials/Credentials.php',
+        'Beyondwords\\Wordpress\\Component\\Settings\\Tabs\\Player\\Player' => __DIR__ . '/../..' . '/src/Component/Settings/Tabs/Player/Player.php',
+        'Beyondwords\\Wordpress\\Component\\Settings\\Tabs\\Pronunciations\\Pronunciations' => __DIR__ . '/../..' . '/src/Component/Settings/Tabs/Pronunciations/Pronunciations.php',
+        'Beyondwords\\Wordpress\\Component\\Settings\\Tabs\\Voices\\Voices' => __DIR__ . '/../..' . '/src/Component/Settings/Tabs/Voices/Voices.php',
         'Beyondwords\\Wordpress\\Component\\SiteHealth\\SiteHealth' => __DIR__ . '/../..' . '/src/Component/SiteHealth/SiteHealth.php',
         'Beyondwords\\Wordpress\\Core\\ApiClient' => __DIR__ . '/../..' . '/src/Core/ApiClient.php',
         'Beyondwords\\Wordpress\\Core\\Core' => __DIR__ . '/../..' . '/src/Core/Core.php',
         'Beyondwords\\Wordpress\\Core\\CoreUtils' => __DIR__ . '/../..' . '/src/Core/CoreUtils.php',
         'Beyondwords\\Wordpress\\Core\\Environment' => __DIR__ . '/../..' . '/src/Core/Environment.php',
-        'Beyondwords\\Wordpress\\Core\\Player\\LegacyPlayer' => __DIR__ . '/../..' . '/src/Core/Player/LegacyPlayer.php',
         'Beyondwords\\Wordpress\\Core\\Player\\Player' => __DIR__ . '/../..' . '/src/Core/Player/Player.php',
         'Beyondwords\\Wordpress\\Core\\Request' => __DIR__ . '/../..' . '/src/Core/Request.php',
         'Beyondwords\\Wordpress\\Core\\Response' => __DIR__ . '/../..' . '/src/Core/Response.php',
@@ -99,6 +138,7 @@ class ComposerStaticInitf9f0daab387946954088015ca7cc4ff8
         'Beyondwords\\Wordpress\\Core\\Updater' => __DIR__ . '/../..' . '/src/Core/Updater.php',
         'Beyondwords\\Wordpress\\Plugin' => __DIR__ . '/../..' . '/src/Plugin.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'Normalizer' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/Resources/stubs/Normalizer.php',
         'PhpToken' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/PhpToken.php',
         'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
         'Symfony\\Component\\DomCrawler\\AbstractUriElement' => __DIR__ . '/..' . '/symfony/dom-crawler/AbstractUriElement.php',
@@ -117,7 +157,68 @@ class ComposerStaticInitf9f0daab387946954088015ca7cc4ff8
         'Symfony\\Component\\DomCrawler\\Test\\Constraint\\CrawlerSelectorTextContains' => __DIR__ . '/..' . '/symfony/dom-crawler/Test/Constraint/CrawlerSelectorTextContains.php',
         'Symfony\\Component\\DomCrawler\\Test\\Constraint\\CrawlerSelectorTextSame' => __DIR__ . '/..' . '/symfony/dom-crawler/Test/Constraint/CrawlerSelectorTextSame.php',
         'Symfony\\Component\\DomCrawler\\UriResolver' => __DIR__ . '/..' . '/symfony/dom-crawler/UriResolver.php',
+        'Symfony\\Component\\PropertyAccess\\Exception\\AccessException' => __DIR__ . '/..' . '/symfony/property-access/Exception/AccessException.php',
+        'Symfony\\Component\\PropertyAccess\\Exception\\ExceptionInterface' => __DIR__ . '/..' . '/symfony/property-access/Exception/ExceptionInterface.php',
+        'Symfony\\Component\\PropertyAccess\\Exception\\InvalidArgumentException' => __DIR__ . '/..' . '/symfony/property-access/Exception/InvalidArgumentException.php',
+        'Symfony\\Component\\PropertyAccess\\Exception\\InvalidPropertyPathException' => __DIR__ . '/..' . '/symfony/property-access/Exception/InvalidPropertyPathException.php',
+        'Symfony\\Component\\PropertyAccess\\Exception\\InvalidTypeException' => __DIR__ . '/..' . '/symfony/property-access/Exception/InvalidTypeException.php',
+        'Symfony\\Component\\PropertyAccess\\Exception\\NoSuchIndexException' => __DIR__ . '/..' . '/symfony/property-access/Exception/NoSuchIndexException.php',
+        'Symfony\\Component\\PropertyAccess\\Exception\\NoSuchPropertyException' => __DIR__ . '/..' . '/symfony/property-access/Exception/NoSuchPropertyException.php',
+        'Symfony\\Component\\PropertyAccess\\Exception\\OutOfBoundsException' => __DIR__ . '/..' . '/symfony/property-access/Exception/OutOfBoundsException.php',
+        'Symfony\\Component\\PropertyAccess\\Exception\\RuntimeException' => __DIR__ . '/..' . '/symfony/property-access/Exception/RuntimeException.php',
+        'Symfony\\Component\\PropertyAccess\\Exception\\UnexpectedTypeException' => __DIR__ . '/..' . '/symfony/property-access/Exception/UnexpectedTypeException.php',
+        'Symfony\\Component\\PropertyAccess\\Exception\\UninitializedPropertyException' => __DIR__ . '/..' . '/symfony/property-access/Exception/UninitializedPropertyException.php',
+        'Symfony\\Component\\PropertyAccess\\PropertyAccess' => __DIR__ . '/..' . '/symfony/property-access/PropertyAccess.php',
+        'Symfony\\Component\\PropertyAccess\\PropertyAccessor' => __DIR__ . '/..' . '/symfony/property-access/PropertyAccessor.php',
+        'Symfony\\Component\\PropertyAccess\\PropertyAccessorBuilder' => __DIR__ . '/..' . '/symfony/property-access/PropertyAccessorBuilder.php',
+        'Symfony\\Component\\PropertyAccess\\PropertyAccessorInterface' => __DIR__ . '/..' . '/symfony/property-access/PropertyAccessorInterface.php',
+        'Symfony\\Component\\PropertyAccess\\PropertyPath' => __DIR__ . '/..' . '/symfony/property-access/PropertyPath.php',
+        'Symfony\\Component\\PropertyAccess\\PropertyPathBuilder' => __DIR__ . '/..' . '/symfony/property-access/PropertyPathBuilder.php',
+        'Symfony\\Component\\PropertyAccess\\PropertyPathInterface' => __DIR__ . '/..' . '/symfony/property-access/PropertyPathInterface.php',
+        'Symfony\\Component\\PropertyAccess\\PropertyPathIterator' => __DIR__ . '/..' . '/symfony/property-access/PropertyPathIterator.php',
+        'Symfony\\Component\\PropertyAccess\\PropertyPathIteratorInterface' => __DIR__ . '/..' . '/symfony/property-access/PropertyPathIteratorInterface.php',
+        'Symfony\\Component\\PropertyInfo\\DependencyInjection\\PropertyInfoConstructorPass' => __DIR__ . '/..' . '/symfony/property-info/DependencyInjection/PropertyInfoConstructorPass.php',
+        'Symfony\\Component\\PropertyInfo\\DependencyInjection\\PropertyInfoPass' => __DIR__ . '/..' . '/symfony/property-info/DependencyInjection/PropertyInfoPass.php',
+        'Symfony\\Component\\PropertyInfo\\Extractor\\ConstructorArgumentTypeExtractorInterface' => __DIR__ . '/..' . '/symfony/property-info/Extractor/ConstructorArgumentTypeExtractorInterface.php',
+        'Symfony\\Component\\PropertyInfo\\Extractor\\ConstructorExtractor' => __DIR__ . '/..' . '/symfony/property-info/Extractor/ConstructorExtractor.php',
+        'Symfony\\Component\\PropertyInfo\\Extractor\\PhpDocExtractor' => __DIR__ . '/..' . '/symfony/property-info/Extractor/PhpDocExtractor.php',
+        'Symfony\\Component\\PropertyInfo\\Extractor\\PhpStanExtractor' => __DIR__ . '/..' . '/symfony/property-info/Extractor/PhpStanExtractor.php',
+        'Symfony\\Component\\PropertyInfo\\Extractor\\ReflectionExtractor' => __DIR__ . '/..' . '/symfony/property-info/Extractor/ReflectionExtractor.php',
+        'Symfony\\Component\\PropertyInfo\\Extractor\\SerializerExtractor' => __DIR__ . '/..' . '/symfony/property-info/Extractor/SerializerExtractor.php',
+        'Symfony\\Component\\PropertyInfo\\PhpStan\\NameScope' => __DIR__ . '/..' . '/symfony/property-info/PhpStan/NameScope.php',
+        'Symfony\\Component\\PropertyInfo\\PhpStan\\NameScopeFactory' => __DIR__ . '/..' . '/symfony/property-info/PhpStan/NameScopeFactory.php',
+        'Symfony\\Component\\PropertyInfo\\PropertyAccessExtractorInterface' => __DIR__ . '/..' . '/symfony/property-info/PropertyAccessExtractorInterface.php',
+        'Symfony\\Component\\PropertyInfo\\PropertyDescriptionExtractorInterface' => __DIR__ . '/..' . '/symfony/property-info/PropertyDescriptionExtractorInterface.php',
+        'Symfony\\Component\\PropertyInfo\\PropertyInfoCacheExtractor' => __DIR__ . '/..' . '/symfony/property-info/PropertyInfoCacheExtractor.php',
+        'Symfony\\Component\\PropertyInfo\\PropertyInfoExtractor' => __DIR__ . '/..' . '/symfony/property-info/PropertyInfoExtractor.php',
+        'Symfony\\Component\\PropertyInfo\\PropertyInfoExtractorInterface' => __DIR__ . '/..' . '/symfony/property-info/PropertyInfoExtractorInterface.php',
+        'Symfony\\Component\\PropertyInfo\\PropertyInitializableExtractorInterface' => __DIR__ . '/..' . '/symfony/property-info/PropertyInitializableExtractorInterface.php',
+        'Symfony\\Component\\PropertyInfo\\PropertyListExtractorInterface' => __DIR__ . '/..' . '/symfony/property-info/PropertyListExtractorInterface.php',
+        'Symfony\\Component\\PropertyInfo\\PropertyReadInfo' => __DIR__ . '/..' . '/symfony/property-info/PropertyReadInfo.php',
+        'Symfony\\Component\\PropertyInfo\\PropertyReadInfoExtractorInterface' => __DIR__ . '/..' . '/symfony/property-info/PropertyReadInfoExtractorInterface.php',
+        'Symfony\\Component\\PropertyInfo\\PropertyTypeExtractorInterface' => __DIR__ . '/..' . '/symfony/property-info/PropertyTypeExtractorInterface.php',
+        'Symfony\\Component\\PropertyInfo\\PropertyWriteInfo' => __DIR__ . '/..' . '/symfony/property-info/PropertyWriteInfo.php',
+        'Symfony\\Component\\PropertyInfo\\PropertyWriteInfoExtractorInterface' => __DIR__ . '/..' . '/symfony/property-info/PropertyWriteInfoExtractorInterface.php',
+        'Symfony\\Component\\PropertyInfo\\Type' => __DIR__ . '/..' . '/symfony/property-info/Type.php',
+        'Symfony\\Component\\PropertyInfo\\Util\\PhpDocTypeHelper' => __DIR__ . '/..' . '/symfony/property-info/Util/PhpDocTypeHelper.php',
+        'Symfony\\Component\\PropertyInfo\\Util\\PhpStanTypeHelper' => __DIR__ . '/..' . '/symfony/property-info/Util/PhpStanTypeHelper.php',
+        'Symfony\\Component\\String\\AbstractString' => __DIR__ . '/..' . '/symfony/string/AbstractString.php',
+        'Symfony\\Component\\String\\AbstractUnicodeString' => __DIR__ . '/..' . '/symfony/string/AbstractUnicodeString.php',
+        'Symfony\\Component\\String\\ByteString' => __DIR__ . '/..' . '/symfony/string/ByteString.php',
+        'Symfony\\Component\\String\\CodePointString' => __DIR__ . '/..' . '/symfony/string/CodePointString.php',
+        'Symfony\\Component\\String\\Exception\\ExceptionInterface' => __DIR__ . '/..' . '/symfony/string/Exception/ExceptionInterface.php',
+        'Symfony\\Component\\String\\Exception\\InvalidArgumentException' => __DIR__ . '/..' . '/symfony/string/Exception/InvalidArgumentException.php',
+        'Symfony\\Component\\String\\Exception\\RuntimeException' => __DIR__ . '/..' . '/symfony/string/Exception/RuntimeException.php',
+        'Symfony\\Component\\String\\Inflector\\EnglishInflector' => __DIR__ . '/..' . '/symfony/string/Inflector/EnglishInflector.php',
+        'Symfony\\Component\\String\\Inflector\\FrenchInflector' => __DIR__ . '/..' . '/symfony/string/Inflector/FrenchInflector.php',
+        'Symfony\\Component\\String\\Inflector\\InflectorInterface' => __DIR__ . '/..' . '/symfony/string/Inflector/InflectorInterface.php',
+        'Symfony\\Component\\String\\LazyString' => __DIR__ . '/..' . '/symfony/string/LazyString.php',
+        'Symfony\\Component\\String\\Slugger\\AsciiSlugger' => __DIR__ . '/..' . '/symfony/string/Slugger/AsciiSlugger.php',
+        'Symfony\\Component\\String\\Slugger\\SluggerInterface' => __DIR__ . '/..' . '/symfony/string/Slugger/SluggerInterface.php',
+        'Symfony\\Component\\String\\UnicodeString' => __DIR__ . '/..' . '/symfony/string/UnicodeString.php',
         'Symfony\\Polyfill\\Ctype\\Ctype' => __DIR__ . '/..' . '/symfony/polyfill-ctype/Ctype.php',
+        'Symfony\\Polyfill\\Intl\\Grapheme\\Grapheme' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/Grapheme.php',
+        'Symfony\\Polyfill\\Intl\\Normalizer\\Normalizer' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/Normalizer.php',
         'Symfony\\Polyfill\\Mbstring\\Mbstring' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/Mbstring.php',
         'Symfony\\Polyfill\\Php80\\Php80' => __DIR__ . '/..' . '/symfony/polyfill-php80/Php80.php',
         'Symfony\\Polyfill\\Php80\\PhpToken' => __DIR__ . '/..' . '/symfony/polyfill-php80/PhpToken.php',
@@ -128,9 +229,9 @@ class ComposerStaticInitf9f0daab387946954088015ca7cc4ff8
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitf9f0daab387946954088015ca7cc4ff8::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitf9f0daab387946954088015ca7cc4ff8::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitf9f0daab387946954088015ca7cc4ff8::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitcacac5a3ae3d71c7f8b9a2e1bcecb136::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitcacac5a3ae3d71c7f8b9a2e1bcecb136::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitcacac5a3ae3d71c7f8b9a2e1bcecb136::$classMap;
 
         }, null, ClassLoader::class);
     }

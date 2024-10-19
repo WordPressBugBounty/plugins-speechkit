@@ -22,45 +22,32 @@ use Beyondwords\Wordpress\Core\CoreUtils;
 class Uninstaller
 {
     /**
+     * Clean up (delete) all BeyondWords transients.
+     *
+     * @since 5.0.0
+     *
+     * @return int The number of transients deleted.
+     */
+    public static function cleanupPluginTransients()
+    {
+        global $wpdb;
+
+        // phpcs:ignore WordPress.DB.DirectDatabaseQuery
+        $count = $wpdb->query("DELETE FROM $wpdb->options WHERE `option_name` LIKE '_transient_beyondwords_%'");
+
+        return $count;
+    }
+
+    /**
      * Clean up (delete) all BeyondWords plugin options.
      *
      * @since 3.7.0
+     *
+     * @return int The number of options deleted.
      */
     public static function cleanupPluginOptions()
     {
-        $options = [
-            // v4.0.0
-            'beyondwords_languages',
-            'beyondwords_player_ui',
-            'beyondwords_player_style',
-            'beyondwords_player_version',
-            'beyondwords_settings_updated',
-            'beyondwords_valid_api_connection',
-            // v3.7.0 beyondwords_*
-            'beyondwords_version',
-            'beyondwords_api_key',
-            'beyondwords_project_id',
-            'beyondwords_preselect',
-            'beyondwords_prepend_excerpt',
-            // v3.0.0 speechkit_*
-            'speechkit_version',
-            'speechkit_api_key',
-            'speechkit_project_id',
-            'speechkit_preselect',
-            'speechkit_prepend_excerpt',
-            // deprecated < v3.0
-            'speechkit_settings',
-            'speechkit_enable',
-            'speechkit_id',
-            'speechkit_select_post_types',
-            'speechkit_selected_categories',
-            'speechkit_enable_telemetry',
-            'speechkit_rollbar_access_token',
-            'speechkit_rollbar_error_notice',
-            'speechkit_merge_excerpt',
-            'speechkit_enable_marfeel_comp',
-            'speechkit_wordpress_cron',
-        ];
+        $options = CoreUtils::getOptions('all');
 
         $total = 0;
 
@@ -84,6 +71,8 @@ class Uninstaller
      *
      * @since 3.7.0
      * @since 4.6.1 Use $wpdb->postmeta variable for table name.
+     *
+     * @return int The number of custom fields deleted.
      */
     public static function cleanupCustomFields()
     {
