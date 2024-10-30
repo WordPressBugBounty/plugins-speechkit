@@ -24,6 +24,7 @@ return array(
     'Beyondwords\\Wordpress\\Component\\Posts\\BulkEdit\\Notices' => $baseDir . '/src/Component/Posts/BulkEdit/Notices.php',
     'Beyondwords\\Wordpress\\Component\\Posts\\Column\\Column' => $baseDir . '/src/Component/Posts/Column/Column.php',
     'Beyondwords\\Wordpress\\Component\\Settings\\Fields\\ApiKey\\ApiKey' => $baseDir . '/src/Component/Settings/Fields/ApiKey/ApiKey.php',
+    'Beyondwords\\Wordpress\\Component\\Settings\\Fields\\AutoPublish\\AutoPublish' => $baseDir . '/src/Component/Settings/Fields/AutoPublish/AutoPublish.php',
     'Beyondwords\\Wordpress\\Component\\Settings\\Fields\\CallToAction\\CallToAction' => $baseDir . '/src/Component/Settings/Fields/CallToAction/CallToAction.php',
     'Beyondwords\\Wordpress\\Component\\Settings\\Fields\\IncludeExcerpt\\IncludeExcerpt' => $baseDir . '/src/Component/Settings/Fields/IncludeExcerpt/IncludeExcerpt.php',
     'Beyondwords\\Wordpress\\Component\\Settings\\Fields\\IncludeTitle\\IncludeTitle' => $baseDir . '/src/Component/Settings/Fields/IncludeTitle/IncludeTitle.php',

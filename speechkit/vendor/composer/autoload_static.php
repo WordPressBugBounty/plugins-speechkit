@@ -97,6 +97,7 @@ class ComposerStaticInitcacac5a3ae3d71c7f8b9a2e1bcecb136
         'Beyondwords\\Wordpress\\Component\\Posts\\BulkEdit\\Notices' => __DIR__ . '/../..' . '/src/Component/Posts/BulkEdit/Notices.php',
         'Beyondwords\\Wordpress\\Component\\Posts\\Column\\Column' => __DIR__ . '/../..' . '/src/Component/Posts/Column/Column.php',
         'Beyondwords\\Wordpress\\Component\\Settings\\Fields\\ApiKey\\ApiKey' => __DIR__ . '/../..' . '/src/Component/Settings/Fields/ApiKey/ApiKey.php',
+        'Beyondwords\\Wordpress\\Component\\Settings\\Fields\\AutoPublish\\AutoPublish' => __DIR__ . '/../..' . '/src/Component/Settings/Fields/AutoPublish/AutoPublish.php',
         'Beyondwords\\Wordpress\\Component\\Settings\\Fields\\CallToAction\\CallToAction' => __DIR__ . '/../..' . '/src/Component/Settings/Fields/CallToAction/CallToAction.php',
         'Beyondwords\\Wordpress\\Component\\Settings\\Fields\\IncludeExcerpt\\IncludeExcerpt' => __DIR__ . '/../..' . '/src/Component/Settings/Fields/IncludeExcerpt/IncludeExcerpt.php',
         'Beyondwords\\Wordpress\\Component\\Settings\\Fields\\IncludeTitle\\IncludeTitle' => __DIR__ . '/../..' . '/src/Component/Settings/Fields/IncludeTitle/IncludeTitle.php',

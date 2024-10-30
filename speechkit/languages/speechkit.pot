@@ -2,14 +2,14 @@
 # This file is distributed under the GPL-2.0+.
 msgid ""
 msgstr ""
-"Project-Id-Version: BeyondWords - Text-to-Speech 5.0.0\n"
+"Project-Id-Version: BeyondWords - Text-to-Speech 5.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/speechkit\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-10-15T09:50:06+00:00\n"
+"POT-Creation-Date: 2024-10-30T08:50:31+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: speechkit\n"
@@ -142,7 +142,7 @@ msgstr ""
 
 #: src/Component/Post/PlayerStyle/PlayerStyle.php:79
 #: src/Component/Settings/Fields/PlayerStyle/PlayerStyle.php:85
-#: src/Component/SiteHealth/SiteHealth.php:226
+#: src/Component/SiteHealth/SiteHealth.php:232
 #: build/index.js:1
 #: src/Component/Post/PlayerStyle/index.js:55
 msgid "Player style"
@@ -201,8 +201,16 @@ msgstr ""
 msgid "Please enter the BeyondWords API key. This can be found in your project settings."
 msgstr ""
 
+#: src/Component/Settings/Fields/AutoPublish/AutoPublish.php:74
+msgid "Auto-publish"
+msgstr ""
+
+#: src/Component/Settings/Fields/AutoPublish/AutoPublish.php:103
+msgid "When auto-publish is disabled all audio content created in WordPress will need to be manually published in the BeyondWords dashboard"
+msgstr ""
+
 #: src/Component/Settings/Fields/CallToAction/CallToAction.php:64
-#: src/Component/SiteHealth/SiteHealth.php:251
+#: src/Component/SiteHealth/SiteHealth.php:257
 msgid "Call-to-action"
 msgstr ""
 
@@ -215,7 +223,7 @@ msgid "Excerpt"
 msgstr ""
 
 #: src/Component/Settings/Fields/IncludeExcerpt/IncludeExcerpt.php:100
-#: src/Component/SiteHealth/SiteHealth.php:156
+#: src/Component/SiteHealth/SiteHealth.php:162
 msgid "Include excerpts in audio"
 msgstr ""
 
@@ -257,7 +265,7 @@ msgid "The voices will be available to select on the Post Edit screen."
 msgstr ""
 
 #: src/Component/Settings/Fields/PlaybackControls/PlaybackControls.php:69
-#: src/Component/SiteHealth/SiteHealth.php:278
+#: src/Component/SiteHealth/SiteHealth.php:284
 msgid "Skip button style"
 msgstr ""
 
@@ -283,7 +291,7 @@ msgid "Player Settings"
 msgstr ""
 
 #: src/Component/Settings/Fields/PlaybackFromSegments/PlaybackFromSegments.php:74
-#: src/Component/SiteHealth/SiteHealth.php:262
+#: src/Component/SiteHealth/SiteHealth.php:268
 msgid "Playback from segments"
 msgstr ""
 
@@ -292,7 +300,7 @@ msgid "Allow readers to listen to a paragraph by clicking or tapping on it"
 msgstr ""
 
 #: src/Component/Settings/Fields/PlayerColors/PlayerColors.php:91
-#: src/Component/SiteHealth/SiteHealth.php:231
+#: src/Component/SiteHealth/SiteHealth.php:237
 msgid "Player theme"
 msgstr ""
 
@@ -354,7 +362,7 @@ msgid "Video"
 msgstr ""
 
 #: src/Component/Settings/Fields/PlayerUI/PlayerUI.php:68
-#: src/Component/SiteHealth/SiteHealth.php:221
+#: src/Component/SiteHealth/SiteHealth.php:227
 msgid "Player UI"
 msgstr ""
 
@@ -379,12 +387,12 @@ msgstr ""
 msgid "Disabled"
 msgstr ""
 
-#: src/Component/Settings/Fields/PreselectGenerateAudio/PreselectGenerateAudio.php:65
-#: src/Component/SiteHealth/SiteHealth.php:162
+#: src/Component/Settings/Fields/PreselectGenerateAudio/PreselectGenerateAudio.php:66
+#: src/Component/SiteHealth/SiteHealth.php:168
 msgid "Preselect ‘Generate audio’"
 msgstr ""
 
-#: src/Component/Settings/Fields/PreselectGenerateAudio/PreselectGenerateAudio.php:87
+#: src/Component/Settings/Fields/PreselectGenerateAudio/PreselectGenerateAudio.php:88
 msgid "No compatible post types found. This plugin will only work with post types that support custom fields."
 msgstr ""
 
@@ -398,7 +406,7 @@ msgid "Please enter your BeyondWords project ID. This can be found in your proje
 msgstr ""
 
 #: src/Component/Settings/Fields/SpeakingRate/BodyVoiceSpeakingRate.php:65
-#: src/Component/SiteHealth/SiteHealth.php:204
+#: src/Component/SiteHealth/SiteHealth.php:210
 msgid "Body voice speaking rate"
 msgstr ""
 
@@ -407,7 +415,7 @@ msgid "Choose the default speaking rate for your article body voice."
 msgstr ""
 
 #: src/Component/Settings/Fields/SpeakingRate/TitleVoiceSpeakingRate.php:65
-#: src/Component/SiteHealth/SiteHealth.php:194
+#: src/Component/SiteHealth/SiteHealth.php:200
 msgid "Title voice speaking rate"
 msgstr ""
 
@@ -416,7 +424,7 @@ msgid "Choose the default speaking rate for your title voice."
 msgstr ""
 
 #: src/Component/Settings/Fields/TextHighlighting/TextHighlighting.php:74
-#: src/Component/SiteHealth/SiteHealth.php:256
+#: src/Component/SiteHealth/SiteHealth.php:262
 msgid "Text highlighting"
 msgstr ""
 
@@ -446,7 +454,7 @@ msgid "Choose the default voice for your article title sections."
 msgstr ""
 
 #: src/Component/Settings/Fields/WidgetPosition/WidgetPosition.php:64
-#: src/Component/SiteHealth/SiteHealth.php:273
+#: src/Component/SiteHealth/SiteHealth.php:279
 msgid "Widget position"
 msgstr ""
 
@@ -467,7 +475,7 @@ msgid "Right"
 msgstr ""
 
 #: src/Component/Settings/Fields/WidgetStyle/WidgetStyle.php:64
-#: src/Component/SiteHealth/SiteHealth.php:268
+#: src/Component/SiteHealth/SiteHealth.php:274
 msgid "Widget style"
 msgstr ""
 
@@ -481,8 +489,8 @@ msgid "widgetStyle setting"
 msgstr ""
 
 #: src/Component/Settings/Fields/WidgetStyle/WidgetStyle.php:128
-#: src/Component/SiteHealth/SiteHealth.php:376
-#: src/Component/SiteHealth/SiteHealth.php:384
+#: src/Component/SiteHealth/SiteHealth.php:382
+#: src/Component/SiteHealth/SiteHealth.php:390
 msgid "None"
 msgstr ""
 
@@ -501,7 +509,7 @@ msgid "Credentials"
 msgstr ""
 
 #: src/Component/Settings/Settings.php:194
-#: src/Component/Settings/Tabs/Content/Content.php:51
+#: src/Component/Settings/Tabs/Content/Content.php:53
 msgid "Content"
 msgstr ""
 
@@ -546,11 +554,11 @@ msgstr ""
 msgid "Sign up free"
 msgstr ""
 
-#: src/Component/Settings/Sync.php:186
+#: src/Component/Settings/Sync.php:187
 msgid "Please check and re-enter your BeyondWords API key and project ID. They appear to be invalid."
 msgstr ""
 
-#: src/Component/Settings/Tabs/Content/Content.php:69
+#: src/Component/Settings/Tabs/Content/Content.php:71
 msgid "Only future content will be affected. To apply changes to existing content, please regenerate each post."
 msgstr ""
 
@@ -613,83 +621,89 @@ msgstr ""
 
 #: src/Component/SiteHealth/SiteHealth.php:151
 #: src/Component/SiteHealth/SiteHealth.php:157
-#: src/Component/SiteHealth/SiteHealth.php:257
+#: src/Component/SiteHealth/SiteHealth.php:163
 #: src/Component/SiteHealth/SiteHealth.php:263
+#: src/Component/SiteHealth/SiteHealth.php:269
 msgid "Yes"
 msgstr ""
 
 #: src/Component/SiteHealth/SiteHealth.php:151
 #: src/Component/SiteHealth/SiteHealth.php:157
-#: src/Component/SiteHealth/SiteHealth.php:257
+#: src/Component/SiteHealth/SiteHealth.php:163
 #: src/Component/SiteHealth/SiteHealth.php:263
+#: src/Component/SiteHealth/SiteHealth.php:269
 msgid "No"
 msgstr ""
 
-#: src/Component/SiteHealth/SiteHealth.php:179
+#: src/Component/SiteHealth/SiteHealth.php:156
+msgid "Auto-publish audio"
+msgstr ""
+
+#: src/Component/SiteHealth/SiteHealth.php:185
 msgid "Default language code"
 msgstr ""
 
-#: src/Component/SiteHealth/SiteHealth.php:184
+#: src/Component/SiteHealth/SiteHealth.php:190
 msgid "Default language ID"
 msgstr ""
 
-#: src/Component/SiteHealth/SiteHealth.php:189
+#: src/Component/SiteHealth/SiteHealth.php:195
 msgid "Title voice ID"
 msgstr ""
 
-#: src/Component/SiteHealth/SiteHealth.php:199
+#: src/Component/SiteHealth/SiteHealth.php:205
 msgid "Body voice ID"
 msgstr ""
 
-#: src/Component/SiteHealth/SiteHealth.php:236
+#: src/Component/SiteHealth/SiteHealth.php:242
 msgid "Light theme"
 msgstr ""
 
-#: src/Component/SiteHealth/SiteHealth.php:241
+#: src/Component/SiteHealth/SiteHealth.php:247
 msgid "Dark theme"
 msgstr ""
 
-#: src/Component/SiteHealth/SiteHealth.php:246
+#: src/Component/SiteHealth/SiteHealth.php:252
 msgid "Video theme"
 msgstr ""
 
-#: src/Component/SiteHealth/SiteHealth.php:299
-#: src/Component/SiteHealth/SiteHealth.php:304
+#: src/Component/SiteHealth/SiteHealth.php:305
+#: src/Component/SiteHealth/SiteHealth.php:310
 msgid "Plugin version"
 msgstr ""
 
 #. translators: 1: Current plugin version, 2: Database plugin version
-#: src/Component/SiteHealth/SiteHealth.php:307
+#: src/Component/SiteHealth/SiteHealth.php:313
 msgid "Version mismatch: file: %1$s / db: %2$s"
 msgstr ""
 
-#: src/Component/SiteHealth/SiteHealth.php:330
+#: src/Component/SiteHealth/SiteHealth.php:336
 msgid "REST API URL"
 msgstr ""
 
-#: src/Component/SiteHealth/SiteHealth.php:343
 #: src/Component/SiteHealth/SiteHealth.php:349
+#: src/Component/SiteHealth/SiteHealth.php:355
 msgid "Communication with REST API"
 msgstr ""
 
-#: src/Component/SiteHealth/SiteHealth.php:344
+#: src/Component/SiteHealth/SiteHealth.php:350
 msgid "BeyondWords API is reachable"
 msgstr ""
 
 #. translators: 1: The IP address the REST API resolves to. 2: The error returned by the lookup.
-#: src/Component/SiteHealth/SiteHealth.php:352
+#: src/Component/SiteHealth/SiteHealth.php:358
 msgid "Unable to reach BeyondWords API at %1$s: %2$s"
 msgstr ""
 
-#: src/Component/SiteHealth/SiteHealth.php:375
+#: src/Component/SiteHealth/SiteHealth.php:381
 msgid "Registered filters"
 msgstr ""
 
-#: src/Component/SiteHealth/SiteHealth.php:383
+#: src/Component/SiteHealth/SiteHealth.php:389
 msgid "Registered deprecated filters"
 msgstr ""
 
-#: src/Component/SiteHealth/SiteHealth.php:402
+#: src/Component/SiteHealth/SiteHealth.php:408
 msgid "Undefined"
 msgstr ""
 
@@ -711,11 +725,11 @@ msgstr ""
 msgid "API request error. Please contact %s."
 msgstr ""
 
-#: src/Core/Core.php:363
+#: src/Core/Core.php:367
 msgid "Unable to delete audio from BeyondWords dashboard"
 msgstr ""
 
-#: src/Core/Core.php:406
+#: src/Core/Core.php:410
 msgid "Unable to restore audio to BeyondWords dashboard"
 msgstr ""
 
