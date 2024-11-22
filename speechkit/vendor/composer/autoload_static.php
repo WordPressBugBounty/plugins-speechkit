@@ -133,6 +133,7 @@ class ComposerStaticInitcacac5a3ae3d71c7f8b9a2e1bcecb136
         'Beyondwords\\Wordpress\\Core\\CoreUtils' => __DIR__ . '/../..' . '/src/Core/CoreUtils.php',
         'Beyondwords\\Wordpress\\Core\\Environment' => __DIR__ . '/../..' . '/src/Core/Environment.php',
         'Beyondwords\\Wordpress\\Core\\Player\\Player' => __DIR__ . '/../..' . '/src/Core/Player/Player.php',
+        'Beyondwords\\Wordpress\\Core\\Player\\PlayerInline' => __DIR__ . '/../..' . '/src/Core/Player/PlayerInline.php',
         'Beyondwords\\Wordpress\\Core\\Request' => __DIR__ . '/../..' . '/src/Core/Request.php',
         'Beyondwords\\Wordpress\\Core\\Response' => __DIR__ . '/../..' . '/src/Core/Response.php',
         'Beyondwords\\Wordpress\\Core\\Uninstaller' => __DIR__ . '/../..' . '/src/Core/Uninstaller.php',

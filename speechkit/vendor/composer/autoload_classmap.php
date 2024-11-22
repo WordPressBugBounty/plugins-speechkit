@@ -60,6 +60,7 @@ return array(
     'Beyondwords\\Wordpress\\Core\\CoreUtils' => $baseDir . '/src/Core/CoreUtils.php',
     'Beyondwords\\Wordpress\\Core\\Environment' => $baseDir . '/src/Core/Environment.php',
     'Beyondwords\\Wordpress\\Core\\Player\\Player' => $baseDir . '/src/Core/Player/Player.php',
+    'Beyondwords\\Wordpress\\Core\\Player\\PlayerInline' => $baseDir . '/src/Core/Player/PlayerInline.php',
     'Beyondwords\\Wordpress\\Core\\Request' => $baseDir . '/src/Core/Request.php',
     'Beyondwords\\Wordpress\\Core\\Response' => $baseDir . '/src/Core/Response.php',
     'Beyondwords\\Wordpress\\Core\\Uninstaller' => $baseDir . '/src/Core/Uninstaller.php',

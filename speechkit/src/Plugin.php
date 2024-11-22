@@ -5,9 +5,10 @@ declare(strict_types=1);
 namespace Beyondwords\Wordpress;
 
 use Beyondwords\Wordpress\Compatibility\WPGraphQL\WPGraphQL;
-use Beyondwords\Wordpress\Core\ApiClient;
 use Beyondwords\Wordpress\Core\Core;
+use Beyondwords\Wordpress\Core\Environment;
 use Beyondwords\Wordpress\Core\Player\Player;
+use Beyondwords\Wordpress\Core\Player\PlayerInline;
 use Beyondwords\Wordpress\Core\Updater;
 use Beyondwords\Wordpress\Component\Post\AddPlayer\AddPlayer;
 use Beyondwords\Wordpress\Component\Post\BlockAttributes\BlockAttributes;
@@ -47,22 +48,6 @@ class Plugin
     public $player;
 
     /**
-     * The API client - this enables various components to access the API.
-     *
-     * @todo Consider switching from dependency injection to singleton or another
-     *       pattern so that components can perform API calls without DI.
-     */
-    public $apiClient;
-
-    /**
-     * Constructor.
-     */
-    public function __construct()
-    {
-        $this->apiClient = new ApiClient();
-    }
-
-    /**
      * Constructor.
      *
      * @since 3.0.0
@@ -77,23 +62,27 @@ class Plugin
         (new WPGraphQL())->init();
 
         // Core
-        $this->core = new Core($this->apiClient);
+        $this->core = new Core();
         $this->core->init();
 
         // Site health
         (new SiteHealth())->init();
 
-        // Player
-        (new Player())->init();
+        // Player (inline or not)
+        if (Environment::hasPlayerInlineScriptTag()) {
+            (new PlayerInline())->init();
+        } else {
+            (new Player())->init();
+        }
 
         // Settings
-        (new Settings($this->apiClient))->init();
+        (new Settings())->init();
 
         /**
          * To prevent browser JS errors we skip adding admin UI components until
          * we have a valid REST API connection.
          */
-        if (SettingsUtils::hasApiSettings()) {
+        if (SettingsUtils::hasValidApiConnection()) {
             // Posts screen
             (new BulkEdit())->init();
             (new BulkEditNotices())->init();
@@ -108,9 +97,9 @@ class Plugin
             // Post screen metabox
             (new GenerateAudio())->init();
             (new DisplayPlayer())->init();
-            (new SelectVoice($this->apiClient))->init();
+            (new SelectVoice())->init();
             (new PlayerStyle())->init();
-            (new Metabox($this->apiClient))->init();
+            (new Metabox())->init();
         }
     }
 }

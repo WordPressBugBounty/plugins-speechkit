@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'beyondwords/wordpress',
-        'pretty_version' => 'v5.1.0',
-        'version' => '5.1.0.0',
-        'reference' => '20a736d4cf786a4936db193abac8dc7d19a23632',
+        'pretty_version' => 'v5.2.0',
+        'version' => '5.2.0.0',
+        'reference' => '7f04769f23e2f4706b2c35207b00ce5fb089e3a3',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'beyondwords/wordpress' => array(
-            'pretty_version' => 'v5.1.0',
-            'version' => '5.1.0.0',
-            'reference' => '20a736d4cf786a4936db193abac8dc7d19a23632',
+            'pretty_version' => 'v5.2.0',
+            'version' => '5.2.0.0',
+            'reference' => '7f04769f23e2f4706b2c35207b00ce5fb089e3a3',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -74,9 +74,9 @@
             'dev_requirement' => false,
         ),
         'symfony/polyfill-php80' => array(
-            'pretty_version' => 'v1.30.0',
-            'version' => '1.30.0.0',
-            'reference' => '77fa7995ac1b21ab60769b7323d600a991a90433',
+            'pretty_version' => 'v1.31.0',
+            'version' => '1.31.0.0',
+            'reference' => '60328e362d4c2c802a54fcbf04f9d3fb892b4cf8',
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/polyfill-php80',
             'aliases' => array(),
