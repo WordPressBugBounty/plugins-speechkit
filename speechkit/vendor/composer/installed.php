@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'beyondwords/wordpress',
-        'pretty_version' => 'v5.3.1',
-        'version' => '5.3.1.0',
-        'reference' => '50dea5bc41ff43e044c2f7bf17c028e21655feee',
+        'pretty_version' => 'v5.4.0',
+        'version' => '5.4.0.0',
+        'reference' => '69057b8f00a6c7e83d273a874a476a96715fe1bc',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'beyondwords/wordpress' => array(
-            'pretty_version' => 'v5.3.1',
-            'version' => '5.3.1.0',
-            'reference' => '50dea5bc41ff43e044c2f7bf17c028e21655feee',
+            'pretty_version' => 'v5.4.0',
+            'version' => '5.4.0.0',
+            'reference' => '69057b8f00a6c7e83d273a874a476a96715fe1bc',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
